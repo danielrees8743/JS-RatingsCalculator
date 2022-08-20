@@ -9,8 +9,8 @@ function collect_ratings() {
 
   elements.forEach((element) => {
     rating = parseInt(element.id.replace('star', ''));
-    ratings.count += parseTint(element.value);
-    ratings.sum += rating * parseTint(element.value);
+    ratings.count += parseInt(element.value);
+    ratings.sum += rating * parseInt(element.value);
   });
   if (ratings.count !== 0) {
     ratings.average = ratings.sum / ratings.count;
