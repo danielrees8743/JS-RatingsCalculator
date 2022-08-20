@@ -6,8 +6,9 @@ function collect_ratings() {
   };
   let rating = 0;
   const elements = document.querySelectorAll('.rating');
+
   elements.forEach((element) => {
-    rating = parseTint(element.id.replace('star', ''));
+    rating = parseInt(element.id.replace('star', ''));
     ratings.count += parseTint(element.value);
     ratings.sum += rating * parseTint(element.value);
   });
